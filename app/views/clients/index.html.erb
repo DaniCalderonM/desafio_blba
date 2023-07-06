@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+<div>
+<h1>Clientes</h1>
+
+<%= link_to "Nuevo Cliente", new_client_path, class:"btn btn-dark" %>
+
+<div id="clients">
+<table class="table table-bordered  bg-dark p-2 text-dark bg-opacity-75">
+<thead>
+<tr>
+<th scope="col">Nº</th>
+<th scope="col">Nombre</th>
+<th scope="col">Edad</th>
+<th scope="col">Pelicula Arrendada</th>
+<th scope="col">Editar Clientes</th>
+</tr>
+</thead>
+<tbody>
+  <% @clients.each do |client| %>
+    <%= render client %>
+    <p>
+    </p>
+  <% end %>
+  </tbody>
+  </table>
+</div>
+</div>

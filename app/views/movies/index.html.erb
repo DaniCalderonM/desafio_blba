@@ -1,0 +1,22 @@
+<p style="color: green"><%= notice %></p>
+<div>
+<h1>Peliculas</h1>
+<div class="pb-3">
+<%= link_to "Nueva Pelicula", new_movie_path, class: "btn btn-dark" %>
+</div>
+<div id="movies">
+<table class="table table-bordered bg-dark p-2 text-dark bg-opacity-75">
+<thead>
+<tr>
+<th scope="col" class="col-5">Nombre</th>
+<th scope="col" class="col-5">Editar Pelicula</th>
+</tr>
+</thead>
+<tbody>
+  <% @movies.each do |movie| %>
+    <%= render movie %>
+  <% end %>
+   </tbody>
+  </table>
+</div>
+</div>

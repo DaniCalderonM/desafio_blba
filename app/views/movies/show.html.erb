@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+<div class="bg-light p-2 text-dark bg-opacity-75 col-3 pb-4">
+<%= render @movie %>
+</div>
+<div>
+  <%= link_to "Editar Pelicula", edit_movie_path(@movie), class: "btn btn-dark" %> |
+  <%= link_to "Volver a Peliculas", movies_path, class: "btn btn-dark" %>
+
+  <%= button_to "Eliminar esta Pelicula", @movie, method: :delete %>
+</div>
