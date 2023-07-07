@@ -5,10 +5,14 @@
     <strong>Edad: </strong><%= @client.age %>
     <br>
     <% if @client.movies.any? %>
-    <strong>Pelicula arrendada actual: </strong><%= @client.movies.last.name %>
+    <strong>Pelicula/s arrendada/s actual/es: </strong>
+    <% @client.movies.each do |m| %>
+  <p> ~<%= m.name %></p>
+     <% end %>
     <% else %>
     <strong>Pelicula arrendada actual: </strong> Actualmente no tiene peliculas arrendadas
     <% end %>
+   
 </div>
 <div>
   <%= link_to "Editar este Cliente", edit_client_path(@client), class: "btn btn-dark" %> |

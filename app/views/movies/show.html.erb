@@ -1,6 +1,6 @@
 <p style="color: green"><%= notice %></p>
 <div class="bg-light p-2 text-dark bg-opacity-75 col-3 pb-4">
-<%= render @movie %>
+<strong>Nombre Pelicula: </strong><%= @movie.name %>
 </div>
 <div>
   <%= link_to "Editar Pelicula", edit_movie_path(@movie), class: "btn btn-dark" %> |
