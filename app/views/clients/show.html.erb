@@ -1,6 +1,14 @@
 <p style="color: green"><%= notice %></p>
-<div class="bg-light p-2 text-dark bg-opacity-75 col-3 pb-4">
-<%= render @client %>
+<div class="bg-light p-2 text-dark bg-opacity-75 col-4 pb-4">
+  <strong>Nombre: </strong><%= @client.name %>
+  <br>
+    <strong>Edad: </strong><%= @client.age %>
+    <br>
+    <% if @client.movies.any? %>
+    <strong>Pelicula arrendada actual: </strong><%= @client.movies.last.name %>
+    <% else %>
+    <strong>Pelicula arrendada actual: </strong> Actualmente no tiene peliculas arrendadas
+    <% end %>
 </div>
 <div>
   <%= link_to "Editar este Cliente", edit_client_path(@client), class: "btn btn-dark" %> |
